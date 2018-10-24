@@ -1,0 +1,240 @@
+/**index.wxss**/
+.container{
+  margin:0;
+}
+.home-top {
+  width:100%;
+  text-align: left;
+  font-size:20px;
+  background:linear-gradient(90deg,#0af,#0085ff);
+  color:#fff;
+  padding:10px 0 5px;
+}
+.home-top .los{
+  font-size:14px;
+  margin:0 10px;
+}
+.home-top .search{
+  font-size:13px;
+  background:#fff;
+  color:#888;
+  margin:5px 10px;
+  text-align: center;
+  padding:8px 0;
+  border-radius:3px;
+}
+
+.home-cate swiper{
+  margin-top: 10px;
+  height:170px;
+}
+.img-foot {
+  width: 40px;
+  height: 40px;
+}
+
+.name-foot {
+  display: block;
+  text-align: center;
+}
+
+.home-cate .cate-list{
+  width:20%;
+  float:left;
+  font-size:12px;
+  color:#666;
+  line-height: 25px;
+  text-align: center
+}
+
+/* 轮播图 */
+.topSwiper{
+  height:200rpx;
+}
+.img-swiper{
+  width:100%;
+  height:100%;
+}
+
+
+.main-top{
+  text-align: center; 
+}
+.main-top .main-h3{
+  text-align: center;
+  font-weight: normal;
+  font-size:15px; 
+}
+.main-top .main-h3:before{
+  display:inline-block;
+  content: "";
+  width: 22px; 
+  height: 1px; 
+  background-color: #999;
+  position: relative;
+  right:10px;
+  bottom:5px;
+}
+.main-top .main-h3:after{
+  display:inline-block;
+  content: "";
+  width: 22px; 
+  height: 1px; 
+  background-color: #999;
+  position: relative;
+  left:10px;
+  bottom:5px;
+}
+ 
+.main-con .main-sort{
+  overflow: hidden;
+  background:#fff;
+}
+.main-con .main-sort.fixed{
+  position: fixed;
+  background:#fff;
+  width:100%;
+  top:0;
+  z-index:999;
+  border-bottom:solid 1px #ccc;
+  border-radius: 0 2px 5px #ccc;
+}
+.main-con .main-sort view{
+  width:25%;
+  float:left;
+  font-size:13px;
+  color:#666;
+  line-height:40px;
+}
+.main-con .main-sort view .select{
+  color:#3190e8;
+  font-weight:bold;
+}
+
+
+.logo {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 20px;
+}
+
+.main-main{
+  display: block;
+  margin-bottom:15px;
+}
+.main-main view.list{
+  overflow: hidden;
+  border-top:solid 1px #ccc;
+  padding-top:10px;
+  padding-bottom:3px; 
+}
+.main-main .list .list-con{
+  width:70%;
+  float:right;
+  font-size:11px;
+  color:#666; 
+}
+.main-main .list .list-con view{
+  margin:5px 0;
+}
+.main-main .list  .list-title{
+  color:#333;
+  font-weight: bold; 
+  font-size:14px;
+}
+ 
+.main-main .list .list-star .fa-star{
+  color:orangered;
+}
+ 
+.main-main .list .list-tags text{ 
+  display: inline-block;
+  border:solid 1px #aaa;   
+  color:#333;
+  padding:1px 3px;
+  margin:0 3px;
+  font-size:10px;
+}
+.main-main .list view.list-acts{
+  border-top:solid 1px #ccc;
+  font-size:10px;
+  margin-top:15px;
+  position: relative; 
+  overflow: hidden;
+}
+.main-main .list view.list-acts.hidden{
+  height:43px;
+}
+.main-main .list view.list-acts .actPos{
+  position: absolute;
+  right:15px;
+}
+.main-main .list view.list-acts .actList{
+  /* border:solid 1px #000; */
+  width:75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color:#333;
+}
+.main-main .list view.list-acts .actList text{
+  color:#fff;
+  padding:2px;
+}
+.main-main .list view.list-acts .actList .shou{
+  background:green;
+ 
+}
+.main-main .list view.list-acts .actList .jian{
+  background:rgb(240, 115, 115);
+}
+.main-main .list view.list-acts .actList .te{
+  background:orangered;
+}
+
+.main-main .refresh{
+  font-size:14px;
+  text-align: center
+}
+
+ /* 筛选模板处理 */
+.selectTem{
+  width:100%;
+  position: fixed;
+  top:40px;
+  z-index:999;
+  background:rgba(0,0,0,0.3);
+  font-size:14px;
+  color:#333;
+  height:100vh;
+}
+.select-main {
+  background:#fff;
+}
+.select-main > view > view{
+  overflow: hidden
+}
+.select-main > view > text{
+  font-size:15px;
+  display:block;
+  color:#666;
+  margin-left:8px;
+}
+.select-main > view > view > view{ 
+  width:33.33%;
+  float:left;
+  text-align: center;
+}
+.select-main > view > view > view text{
+  display:block;
+  background:#fafafa;
+  line-height:30px;
+  margin:8px;
+}
+.selectTem .btn button{
+  width:50%;
+  line-height:45px;
+  font-size:20px;
+}
+

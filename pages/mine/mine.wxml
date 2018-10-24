@@ -1,0 +1,8 @@
+<!--pages/mine/mine.wxml-->
+<view>
+  这是我的页面
+  <view>
+    <rests> </rests>
+    <text class='fa fa-phone'></text>
+  </view> 
+</view>

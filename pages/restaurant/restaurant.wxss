@@ -1,0 +1,18 @@
+/* pages/restaurant/restaurant.wxss */
+.shop-top{
+  height:86px;
+  background:#eee;
+  position: relative; 
+}
+.shop-top text{
+  position:absolute;
+  width:70px;
+  height:70px;
+  background:#ccc;
+  border-radius:5px;
+  left:calc( 50% - 35px );
+  bottom:-20px;
+}
+ 
+
+

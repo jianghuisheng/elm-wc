@@ -1,0 +1,6 @@
+<!--components/rests/rests.wxml-->
+<view>
+  这是自定义的组件
+  <text class='fa fa-phone'></text>
+  <text class="rest"> 这是内容 </text>
+</view> 

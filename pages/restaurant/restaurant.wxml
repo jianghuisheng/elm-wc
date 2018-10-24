@@ -1,0 +1,12 @@
+<!--pages/restaurant/restaurant.wxml-->
+<view class="shop">
+    <view class="shop-top">
+      <text></text>
+    </view>
+    <view class="shop-shop">
+        <view >
+         
+          <text> {{ shopLos.name }} </text>
+        </view>
+    </view>
+</view>

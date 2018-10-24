@@ -1,0 +1,42 @@
+<template name="select">
+  <view class="selectTem" bindtap="closeSelect"> 
+    <view class="select-main">
+      <view class="support">
+        <text>
+          商家服务(可多选) 
+        </text>
+        <view>
+          <view wx:for="{{supports}}" wx:for-item="support" wx:for-index="supportIns" wx:key="supportIns">
+           
+            <text> {{ support.name }} </text>
+          
+          </view>
+        </view>
+      </view>
+      <view>
+        <text> 优惠活动(单选) </text>
+        <view>
+          <view wx:for="{{activity_types}}" wx:for-item="activity" wx:for-index="actIns" wx:key="actIns">
+           
+            <text> {{ activity.name }} </text>
+           
+          </view> 
+        </view>
+      </view>
+      <view>
+        <text> 人均消费 </text>
+        <view>
+          <view wx:for="{{average_costs}}" wx:for-item="average" wx:for-index="averageIns" wx:key="averageIns"> 
+            <text> {{ average.description }} </text> 
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='btn'>
+      <button size="mini"> 取消 </button>
+      <button size="mini" type="primary"> 确定 </button>
+    </view>
+
+  </view>
+</template>

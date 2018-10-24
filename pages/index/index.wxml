@@ -1,0 +1,106 @@
+<!--index.wxml-->
+<!-- 头部 -->
+<import src="../../templates/restList.wxml" />
+<import src="../../templates/select.wxml" />
+<view class="container">
+  <view class='home-top'>
+    <view class='los'>
+      <text class='fa fa-map-marker'></text> {{ losName }}
+      <text class='fa fa-caret-down'></text>
+    </view>
+    <view class='search'>
+      <text class='fa fa-search'></text> 搜索饿了么商家、商品名称
+    </view>
+  </view>
+
+  <!-- 美食分类 -->
+  <view class='home-cate'>
+    <swiper indicator-dots='true' indicator-color='blue' indicator-active-color='red' duration='1000'>
+      <block wx:for="{{cateLists}}" wx:for-index="cateIndex" wx:for-item="cateList" wx:key="cateIndex">
+        <swiper-item>
+          <view class="cate-list" wx:for="{{cateList}}" wx:for-index="ctIndex" wx:for-item="ctList" wx:key="ctIndex">
+          <image src=" {{Img.filter(ctList.image_hash)}}" alt="" class='img-foot'></image>
+            <text class='name-foot'> {{ ctList.name }} </text>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+<!-- 轮播图 -->
+  <swiper indicator-dots="true" interval="2000" duration="1000" class="topSwiper" autoplay="true">
+    <swiper-item wx:for="{{imgs}}" wx:key=" *{{index}}">
+      <image src="{{item}}" class='img-swiper' />
+    </swiper-item>
+  </swiper>
+
+
+  <view class='main-con' id="mainCon">
+  <!-- 主体头部 -->
+    <view class='main-top'>
+      <rich-text nodes="{{tjNodes}}"></rich-text>
+      <view class="{{ sortFixed ? 'fixed main-sort' : 'main-sort' }}">
+        <view>
+          <text> 综合排序 </text>
+          <text class='fa fa-caret-down'></text>
+        </view>
+        <view>
+          <text bindtap="selectClick" data-selectins="ins2" class="{{ selectIns === 'ins2' ? 'select' : '' }} "> 距离最近 </text>
+        </view>
+        <view>
+          <text bindtap="selectClick" data-selectins="ins3" class="{{ selectIns === 'ins3' ? 'select' : ''}} "> 品质联盟 </text>
+        </view>
+        <view>
+          <text bindtap="selectClick" data-selectins="ins4" class="{{ selectIns === 'ins4' ? 'select' : '' }}"> 筛选 <text class='fa fa-filter'>  </text></text>
+
+        </view>
+      </view>
+    </view>
+  <!-- 主体内容 -->
+    <view class="main-main">
+      <view>
+        <template is="restList" wx:for="{{restLists}}" wx:for-index="restIndex" wx:for-item="restList" wx:key="restIndex" data="{{ ...restList }}" class='content' />
+      </view>
+      <view class="refresh" wx:if="{{ isOk }}">
+        <text class="fa fa-spinner fa-pulse"></text> 正在加载...
+      </view>
+    </view>
+
+
+
+  </view>
+
+  <template wx:if="{{ selectTem }}" is="select" data="{{...selectLists}}" />
+
+   <wxs module="Img">
+      function filter(value) {
+        var v1 = value.substring(0, 1);
+        var v2 = value.substring(1, 3);
+        var v3 = value.substring(3);
+        var v4 = value.substring(32);
+        var path = 'http://fuss10.elemecdn.com/' + v1 + '/' + v2 + '/' + v3 + '.' + v4;
+        return path;
+      }
+      module.exports = {
+        filter: filter
+      }
+    </wxs>
+
+    <wxs module="Dis">
+      function filter(value) {
+        if (value < 1000) {
+          return value + 'm';
+        }
+        var result = value / 1000;
+
+        result = result.toFixed(2);
+
+        return result + 'km';
+      }
+
+      module.exports = {
+        filter: filter
+      }
+    </wxs>
+
+</view>

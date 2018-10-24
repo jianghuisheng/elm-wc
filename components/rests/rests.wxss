@@ -1,0 +1,4 @@
+/* components/rests/rests.wxss */
+.rest{
+  color:red;
+}
